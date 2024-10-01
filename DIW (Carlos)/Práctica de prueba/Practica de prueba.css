@@ -45,37 +45,148 @@
     .avatar img{
         width: 6em;
     }
-    .second{
+
+    .content{
+        padding: 1em;
+        display:flex;
+    }
+
+    .profile{
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        background-color:darkgoldenrod;
-        height: 35em;
-        margin-top: 2em;
+        margin-right: 3em;
+        width: 12em;
+        height: 14em;
+        background-color:rgb(116, 190, 250);
+        border-radius: 30px;
+    }
+
+    .profile p{
+        margin-top:1em;
+    }
+
+    .profile img{
+        padding-top: 1em;
+        width: 10em;
+        margin: 0 auto;
+    }
+
+    .post {
+        width: 67%;
+        background-color: #5898e2;
+        padding: 1em;
+        margin-right: 3em;
+        border-radius: 8px;
+    }
+
+    .post h1{
+        padding-bottom: 0.5em;
+    }
+    
+    .post-item {
+        background-color: white;
+        margin-bottom: 1em;
+        padding: 1em;
+        border-radius: 5px;
+    }
+    
+    .post-item p {
+        margin-top: 0.5em;
+        font-size: 1em;
+    }
+
+    .topics {
+        width: 18em; 
+        background-color: rgb(54, 157, 241);
+        padding: 1em;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .trending-topics, .suggested-follows {
+        background-color: white;
+        padding: 1em;
+        border-radius: 6px;
         margin-bottom: 2em;
-        margin-left: 1em;
-        margin-right: 1em;
+    }
+    
+    .trending-topics h3, .suggested-follows h3 {
+        padding-bottom: 1em;
+    }
+    
+    .trending-topics ul, .suggested-follows ul {
+        list-style: none;
+    }
+    
+    .trending-topics li {
+        margin-bottom: 0.5em;
+        color: rgb(11, 125, 170);
+    }
+    
+    .suggested-follows li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1em;
+    }
+    
+    .suggested-follows li img {
+        width: 3em;
+        height: 3em;
+        margin-right: 0.5em;
+    }
+    
+    .suggested-follows li:hover, .trending-topics li:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        color: #0056a3;
     }
 
-    .third{
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #032250;
+        color: white;
+        text-align: center;
+    }
+    
+    .footer-container {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color:cornflowerblue;
-        width: 50%;
-        height: 20em;
-        margin: 1em;
+        justify-content: space-around;
+        max-width: 80%;
+        margin: auto;
+    }
+    
+    .footer-column {
+        padding: 1em;
+        margin-top: 1em;
+        width: 50em;
+    }
+    
+    .footer-column h4 {
+        margin-bottom: 1em;
+        font-size: 18px;
+    }
+    
+    .footer-column ul {
+        list-style: none;
+    }
+    
+    .footer-column ul li {
+        margin-bottom: 8px;
+    }
+    
+    .footer-column ul li a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    .footer-column ul li a:hover {
+        color: rgb(165, 234, 255);
     }
 
-    .fourth{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color:burlywood;
-        width: 50%;
-        height: 10em;
-        margin: 1em;
-    }
 
 }
 
