@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/home/alumnado/Documentos/2-DAW/DWES (Jorge)/Tema_2/myvenv/bin/python3" "$0" "$@"
+'''exec' "/home/alumnado/Documentos/Carpeta de Git/2-DAW/DWES (Jorge)/Tema_2/myvenv/bin/python3" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re
