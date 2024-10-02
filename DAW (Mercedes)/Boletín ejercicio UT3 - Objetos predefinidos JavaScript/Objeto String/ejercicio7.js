@@ -3,8 +3,13 @@ Modificar el ejercicio anterior para una vez validado el correo mostrar el usuar
 
 let email = prompt("Introduce una dirección de email");
 
-const regex = /^[a-z]+@[a-z]+\.[a-z]{2,3}$/;
+let comprobarEmail= new RegExp(/^[a-z]+@[a-z]+\.[a-z]{2,3}$/);
 
-while (email){
+while (!comprobarEmail.test(email)){
     email = prompt("Introduce una dirección de email valida, por favor");
 }
+
+email = email.split("@");
+
+console.log("El usuario de este email es "+email[0])
+console.log("El servidor de este email es "+email[1])
