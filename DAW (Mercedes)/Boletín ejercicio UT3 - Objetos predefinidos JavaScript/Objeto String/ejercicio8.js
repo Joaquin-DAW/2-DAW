@@ -11,7 +11,7 @@ for (let i = palabra.length; i >= 0; i--) {
     resultado+=invertida;
 }
 
-if (palabra == resultado){
+if (palabra.toLowerCase() == resultado.toLowerCase()){
     console.log("La palabra "+palabra+" es un palíndromo");
 }
 else {

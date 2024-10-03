@@ -3,7 +3,7 @@ Modificar el ejercicio anterior para una vez validado el correo mostrar el usuar
 
 let email = prompt("Introduce una dirección de email");
 
-let comprobarEmail= new RegExp(/^[a-z]+@[a-z]+\.[a-z]{2,3}$/);
+let comprobarEmail= new RegExp(/^[a-z,_0-9-]+@[a-z]+\.[a-z]{2,3}$/g);
 
 while (!comprobarEmail.test(email)){
     email = prompt("Introduce una dirección de email valida, por favor");
