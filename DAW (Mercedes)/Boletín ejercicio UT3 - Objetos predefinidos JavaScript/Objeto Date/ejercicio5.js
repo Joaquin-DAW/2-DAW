@@ -1,20 +1,27 @@
 /*Realizar un programa que muestre cuántos días faltan para el próximo cumpleaños del usuario y muestre “¡Felicidades!” si es el día señalado.*/
 
-let cumpleanios = prompt("Introduce tu cumpleaños, en formato año-mes-dia");
+let fechaNacimiento = prompt("Introduce tu fecha de nacimiento en formato dia/mes");
+
+let partes = fechaNacimiento.split("/");
+let dia = parseInt(partes[0]);
+let mes = parseInt(partes[1]); 
 
 let fechaCumpleanios = new Date(cumpleanios);
-
-let diaCum = fechaCumpleanios.getDate();
-let mesCum = fechaCumpleanios.getMonth();
-
-
 let hoy = new Date();
 
-let diaHoy = hoy.getDate();
-let mesHoy = hoy.getMonth();
+let añoActual = hoy.getFullYear();
+let proximoCumple = new Date(añoActual, fechaCumpleanios.getMonth(), fechaCumpleanios.getDate());
 
+if (hoy > proximoCumple) {
+    proximoCumple.setFullYear(añoActual + 1);
+}
 
+let diferencia = proximoCumple - hoy;
 
-if (diaCum == diaHoy && mesCum == mesHoy ) {
-    console.log("Felicidades es tu cumpleaños");
+let diasFaltantes = parseInt(diferencia / (1000 * 60 * 60 * 24));
+
+if (diasFaltantes === 0) {
+    console.log("¡Felicidades! Es tu cumpleaños");
+} else {
+    console.log(`Faltan ${diasFaltantes} días para tu cumpleaños`);
 }
