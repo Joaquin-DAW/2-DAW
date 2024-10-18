@@ -24,6 +24,12 @@
                     Pulsa para ver libros del mismo idioma o Español
                 </a>
             </h3>
+            <h3>
+                Último cliente que se llevo el libro:
+                <a href="{% url 'ultimo_cliente_libro' libro.id %}">
+                    Pulsa para ver el último cliente
+                </a>
+            </h3>   
         </div>
     {% endfor %}
 
