@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/*Encabezado*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#00300c;
+}
+
+/*Logo*/
+.logo img {
+    width: 170px;
+}
+
+/*Menú*/
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 8px;
+    border-radius: 25px;
+}
+
+.menu ul li a:hover {
+    background-color: #0f7202;
+}
+
+/*Botones de login y registro*/
+
+.sesion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 15px;
+    margin-right: 50px;
+}
+
+.login button, .registro button {
+    background-color: #001A07;
+    border-color: #000902;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 17px;
+}
+
+.login button:hover, .registro button:hover {
+    background-color: #0B4B1C;
+}
+
+/*Footer*/
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #001A07;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.enlaces ul li a, .social ul li a{
+    color:white;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 10px;
+    min-width: 200px;
+}
+
+.footer-bottom {
+    background-color: #000902;
+    padding: 10px 0;
+}
