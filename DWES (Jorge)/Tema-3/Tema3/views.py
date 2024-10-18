@@ -33,11 +33,10 @@ def dame_libros_biblioteca(request,id_biblioteca,texto_libro):
     return render(request, 'libro/lista.html',{"libros_mostrar":libros})
 
 def dame_ultimo_cliente_libro(request,libro):
-    cliente = Cliente.objects.filter(prestamo__libro=libro).order_by("-prestamo__fecha_prestamo")[:1].get()
-    cliente = (Cliente.objects.raw("SELECT * FROM biblioteca_cliente c "
-                               + " JOIN biblioteca_prestamo p ON p.libro_id = %s "   
-                               + " ORDER BY p.fecha_prestamo DESC "
-                               ,[libro])[0]
-               )
-    
+    cliente = Cliente.objects.filter(prestamos__libro=libro).order_by("-prestamos__fecha_prestamo")[:1].get()
     return  render(request, 'cliente/cliente.html',{"cliente":cliente})
+
+def libros_no_prestados(request):
+    libros = Libro.objects.select_related("biblioteca").prefetch_related("autores")
+    libros = libros.filter(prestamos=None)
+    return render(request, 'libro/lista.html',{"libros_mostrar":libros})
